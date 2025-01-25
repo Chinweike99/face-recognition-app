@@ -8,7 +8,7 @@ const Camera = ({onCapture}) => {
     const startCamera = async () => {
       try {
         const stream = await navigator.mediaDevices.getUserMedia({video: {} });
-        videoRef.current.srcObject = startCamera;
+        videoRef.current.srcObject = stream;
       } catch (error) {
         console.log(error)
       }
